@@ -20,7 +20,7 @@ const App = () => {
         <Route
           path="/admin"
           element={
-            token ? <UserManagement /> : <Navigate to="/login" replace />
+            <UserManagement />
           }
         />
       </Routes>
