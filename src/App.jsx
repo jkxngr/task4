@@ -15,12 +15,12 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Login />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/register" element={<RegistrationForm />} />
         <Route
           path="/admin"
           element={
-            token ? <UserManagement /> : <Navigate to="/" replace />
+            token ? <UserManagement /> : <Navigate to="/login" replace />
           }
         />
       </Routes>

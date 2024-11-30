@@ -14,7 +14,7 @@ const RegistrationForm = () => {
         try {
             await api.post('/register', { name, email, password });
             setSuccess('Registration successful! You can now log in.');
-            setTimeout(() => navigate('/'), 2000);
+            setTimeout(() => navigate('/login'), 2000);
         } catch (err) {
             console.error(err);
         }
@@ -73,7 +73,7 @@ const RegistrationForm = () => {
               </button>
             </form>
             <p className="text-center mt-3">
-              Already have an account? <a href="/">Sign In</a>
+              Already have an account? <a href="/login">Sign In</a>
             </p>
           </div>
         </div>

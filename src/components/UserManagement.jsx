@@ -11,7 +11,7 @@ const UserManagement = () => {
   const token = localStorage.getItem("token");
   useEffect(() => {
     if (!token) {
-      navigate("/");
+      navigate("/login");
     } else {
       checkIfUserBlocked();
       fetchUsers();
@@ -41,7 +41,7 @@ const UserManagement = () => {
 
   const logout = () => {
     localStorage.removeItem("token");
-    navigate("/");
+    navigate("/login");
   };
 
   const formatDate = (dateString) => {
